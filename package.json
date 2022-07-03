@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon main.js",
-    "start": "yarn generate-data && node main.js",
+    "start": "npm run generate-data && node main.js",
     "generate-data": "node generate-data.js"
   },
   "keywords": [
@@ -17,10 +17,10 @@
   "license": "MIT",
   "dependencies": {
     "json-server": "^0.17.0",
-    "query-string": "^7.1.1"
+    "query-string": "^7.1.1",
+    "@faker-js/faker": "^7.3.0"
   },
   "devDependencies": {
-    "@faker-js/faker": "^7.3.0",
     "nodemon": "^2.0.18"
   }
 }
