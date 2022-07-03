@@ -1,0 +1,53 @@
+@baseUrl=http://localhost:3000/api
+@resourceName =products
+
+# Products
+
+# @name getAll
+GET {{baseUrl}}/{{resourceName}}
+
+###
+
+# @name filterProducts
+GET {{baseUrl}}/{{resourceName}}?price_gte=800
+
+###
+
+# @name pagination
+GET {{baseUrl}}/{{resourceName}}?_page=1&_limt=5
+
+###
+# @name sort
+GET {{baseUrl}}/{{resourceName}}?_sort=price&_order=asc
+
+###
+
+# @name addNew
+POST {{baseUrl}}/{{resourceName}} 
+Content-Type: application/json
+
+{
+    "categoryId": "83bd66ac-7b81-4300-8d45-2f75bc9565cc",
+    "name": "Tasty Bronze Sausages",
+    "color": "violet",
+    "price": 1000,
+    "description": "The slim & simple Maple Gaming Keyboard from Dev Byte comes with a sleek body and 7- Color RGB LED Back-lighting for smart functionality",
+    "thumbnail": "https://loremflickr.com/400/400"
+}
+
+###
+
+# @name update
+PATCH  {{baseUrl}}/{{ resourceName}}/ksRL2Go
+Content-Type: application/json
+
+{
+    "name": "Tasty Bronze Sausages Update",
+    "color": "violet",
+    "price": 5000
+}
+
+###
+
+# @name remove
+DELETE  {{baseUrl}}/{{ resourceName }}/2
