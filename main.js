@@ -39,7 +39,7 @@ router.render = (req, res) => {
       data: res?.locals?.data,
       pagination: {
         _page: Number.parseInt(queryParams?._page),
-        _limit: Number.parseInt(queryParams?._limt),
+        _limit: Number.parseInt(queryParams?._limit),
         _totalRows: Number.parseInt(totalCountHeader),
       }
     }
